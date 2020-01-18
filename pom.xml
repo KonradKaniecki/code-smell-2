@@ -10,7 +10,7 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<!-- Organization and project keys are displayed in the right sidebar of the project homepage -->
 		<sonar.organization>konradkaniecki</sonar.organization>
-		<sonar.projectKey>CodeSmell4</sonar.projectKey>
+		<sonar.projectKey>code-smell</sonar.projectKey>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<jdk.version>1.8</jdk.version>
