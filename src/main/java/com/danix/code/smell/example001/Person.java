@@ -13,14 +13,12 @@ public class Person extends Customer {
 
     @Override
     public void withdraw(final Money money) {
-        if (account.getType().isPremium()) {
-            if (account.isOverdraft()) {
-                account.substract(Money.newInstance(money.getAmount() + money.getAmount() * account.overdraftFee(),
-                        money.getCurrency()));
-            } else {
-                account.substract(Money.newInstance(money.getAmount(), money.getCurrency()));
-            }
-        } 
+        if (account.isOverdraft()) {
+            account.substract(Money.newInstance(money.getAmount() + money.getAmount() * account.overdraftFee(),
+                    money.getCurrency()));
+        } else {
+            account.substract(Money.newInstance(money.getAmount(), money.getCurrency()));
+        }
     }
 
     @Override
@@ -28,3 +26,4 @@ public class Person extends Customer {
         return name + " " + surname + " ";
     }
 }
+
